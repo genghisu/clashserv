@@ -1,0 +1,5 @@
+[zc.buildout]
+default = iw.recipe.cmd:Cmd
+py = iw.recipe.cmd:Python
+sh = iw.recipe.cmd:Cmd
+

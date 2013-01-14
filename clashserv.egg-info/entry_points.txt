@@ -1,0 +1,3 @@
+[console_scripts]
+django = django.core.management:execute_from_command_line
+

@@ -1,0 +1,20 @@
+<div class="pagination">
+    <ul>
+        {% if not current_page.solo %}
+            {% for page in current_page.page_range %}
+                {% if not page %}
+                    <span class='filler'>...</span>
+                {% else %}
+                    {% ifequal page current_page.number %}
+                        <a href='?page={{page}}' class='current_page'>{{page}}</a>
+                    {% else %}
+                        <a href='?page={{page}}'>{{page}}</a>
+                    {% endifequal %}
+                {% endif %}
+            {% endfor %}
+            {% if current_page.has_next %}
+                <a href='?page={{current_page.next_page_number }}'>Next</a>
+            {% endif %}
+        {% endif %}
+    </ul>
+</div>

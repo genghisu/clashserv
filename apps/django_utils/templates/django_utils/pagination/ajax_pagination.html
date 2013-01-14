@@ -1,0 +1,27 @@
+{% load ajax %}
+
+<div class="pagination">
+    <ul>
+        {% if not current_page.solo %}
+            {% for page in current_page.page_range %}
+                {% if not page %}
+                    <span class='filler'>...</span>
+                {% else %}
+                    {% ifequal page current_page.number %}
+                        <a id='{{current_page.unique_id}}{{page}}' href='#' class='current_page' data="{target:'paginated_div_{{current_page.unique_id}}',
+                                    link:'{{current_page.source}}?page={{page}}'}">{{page}}</a>
+                    {% else %}
+                        <a id='{{current_page.unique_id}}{{page}}' href='#' data="{target:'paginated_div_{{current_page.unique_id}}',
+                                    link:'{{current_page.source}}?page={{page}}'}">{{page}}</a>
+                    {% endifequal %}
+                    {% ajax_update current_page.unique_id page %}
+                {% endif %}
+            {% endfor %}
+            {% if current_page.has_next %}
+                <a id='{{current_page.unique_id}}next_page' href="#" data="{target:'paginated_div_{{current_page.unique_id}}',
+                        link:'{{current_page.source}}?page={{current_page.next_page_number}}'}">Next</a>
+                {% ajax_update current_page.unique_id next_page %}
+            {% endif %}
+        {% endif %}
+    </ul>
+</div>

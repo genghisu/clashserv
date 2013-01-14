@@ -1,0 +1,17 @@
+setup.py
+./project/__init__.py
+./project/development_settings.py
+./project/fabfile.py
+./project/local_settings.py
+./project/local_settings_template.py
+./project/metadata.py
+./project/production_settings.py
+./project/settings.py
+./project/test_settings.py
+./project/urls.py
+clashserv.egg-info/PKG-INFO
+clashserv.egg-info/SOURCES.txt
+clashserv.egg-info/dependency_links.txt
+clashserv.egg-info/entry_points.txt
+clashserv.egg-info/requires.txt
+clashserv.egg-info/top_level.txt

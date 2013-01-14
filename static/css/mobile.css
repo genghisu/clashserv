@@ -1,0 +1,16 @@
+.app-container {
+	width: 50%;
+	padding: 5px;
+	width: 160px;
+}
+
+.app-icon {
+	border-radius: 5px;
+	width: 150px;
+	height: 150px;
+}
+
+.app-label {
+	text-align: center;
+	width: 150px;
+}

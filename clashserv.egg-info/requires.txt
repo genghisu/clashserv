@@ -1,0 +1,13 @@
+boto
+South
+django-extensions
+pytz
+
+[SQLite]
+pysqlite>=2.0.3
+
+[PostgreSQL2]
+psycopg2>=2.0.5
+
+[PostgreSQL]
+psycopg>=1.1.21
